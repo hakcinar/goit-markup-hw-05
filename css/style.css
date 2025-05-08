@@ -337,7 +337,7 @@ footer {
   transition: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
-.footer-input-area h5 {
+.footer-input-area label {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.5;
@@ -352,6 +352,7 @@ footer {
   border: 1px solid var(--cornflower);
   width: 264px;
   outline: none;
+  margin-top: 16px;
 }
 .footer-input-field {
   display: flex;
@@ -379,6 +380,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 16px;
 }
 .footer-button:hover {
   background-color: var(--ocean);
