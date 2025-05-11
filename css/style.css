@@ -534,43 +534,54 @@ footer {
   gap: 8px;
   margin-bottom: 24px;
   position: relative;
+  width: 100%;
 }
 .checkbox-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  z-index: 99;
-  opacity: 0;
+  display: none;
 }
 .checkbox-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.show-checkbox {
+  cursor: pointer;
+  position: relative;
   width: 16px;
   height: 16px;
   border-radius: 4px;
   border: 1px solid var(--navy);
-  cursor: pointer;
 }
-.checkbox-input:checked + .checkbox-label {
-  background-color: var(--iris);
+.checkbox-label:checked .show-checkbox {
+  background: var(--iris);
+}
+.checkbox-label:checked .checkbox-icon {
+  display: block;
+  fill: var(--white);
 }
 .checkbox-icon {
   display: none;
   position: absolute;
-  top: 8px;
-  left: 16px;
+  top: 9px;
+  left: 8px;
   transform: translate(-50%, -50%);
   pointer-events: none;
   fill: var(--white);
+  background-color: var(--iris);
+  border-radius: 4px;
+  border: 1px solid var(--navy);
+}
+.checkbox-text {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 4%;
+  cursor: pointer;
 }
 .checkbox-input:checked + .checkbox-label + svg {
   display: block;
   fill: var(--white);
   pointer-events: none;
-}
-.checkbox-area span {
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 300;
-  letter-spacing: 4%;
 }
 .checkbox-area span a {
   color: var(--iris);
